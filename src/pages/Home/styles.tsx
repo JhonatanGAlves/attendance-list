@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 20px;
+  height: 100vh;
+
+  background: #151F30;
 
   h1 {
     padding: 0;
@@ -48,5 +50,10 @@ export const Container = styled.div`
     &:hover {
       filter: brightness(0.9);
     }
+  }
+
+  hr {
+    width: 100%;
+    margin: 50px;
   }
 `

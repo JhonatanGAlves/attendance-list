@@ -5,8 +5,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    background: #151F30;
   }
 
   body, input, button {
