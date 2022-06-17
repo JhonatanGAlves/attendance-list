@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Card } from "../../components/Card"
 import { Container } from "./styles"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAdd } from '@fortawesome/free-solid-svg-icons'
 
 type Students = {
   name: string,
@@ -27,14 +29,26 @@ export const Home = () => {
   return (
     <Container>
       <>
-        <h1>Lista de Presença</h1>
-        <input
-          type="text"
-          value={studentName}
-          onChange={event => setStudentName(event.target.value)}
-          placeholder="Digite o nome..."
-        />
-        <button onClick={handleAddStudent}>Adicionar</button>
+        <header>
+          <h1>Lista de Presença</h1>
+          <div>
+            <strong>Jhonatan</strong>
+            <img src="https://github.com/JhonatanGAlves.png" alt="Foto do perfil" />
+          </div>
+        </header>
+        <div className="add-new-student">
+          <input
+            type="text"
+            value={studentName}
+            onChange={event => setStudentName(event.target.value)}
+            placeholder="Digite o nome..."
+          />
+          <FontAwesomeIcon
+            icon={faAdd}
+            onClick={handleAddStudent}
+          />
+        </div>
+
         <hr />
 
         {students.map(student => (
