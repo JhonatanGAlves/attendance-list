@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "../../components/Card"
 import { Container } from "./styles"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdd } from '@fortawesome/free-solid-svg-icons'
+import axios from "axios"
 
 type Students = {
   name: string,
@@ -12,6 +13,21 @@ type Students = {
 export const Home = () => {
   const [studentName, setStudentName] = useState('')
   const [students, setStudents] = useState<Students[]>([])
+  const [user, setUser] = useState({ name: '', avatar: '' })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("https://api.github.com/users/JhonatanGAlves")
+      const data = await response.data
+
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url
+      })
+    }
+
+    fetchData().catch(error => console.error(error))
+  }, [])
 
   const handleAddStudent = () => {
     const newStudent = {
@@ -32,8 +48,8 @@ export const Home = () => {
         <header>
           <h1>Lista de Presença</h1>
           <div>
-            <strong>Jhonatan</strong>
-            <img src="https://github.com/JhonatanGAlves.png" alt="Foto do perfil" />
+            <strong>{user.name}</strong>
+            <img src={user.avatar} alt="Foto do perfil" />
           </div>
         </header>
         <div className="add-new-student">
