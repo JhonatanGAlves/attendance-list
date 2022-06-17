@@ -1,6 +1,5 @@
+import { Card } from "../../components/Card"
 import { Container } from "./styles"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export const Home = () => {
   return (
@@ -11,6 +10,9 @@ export const Home = () => {
         placeholder="Digite o nome..."
       />
       <button>Adicionar</button>
+      <hr />
+      <Card name="Jhonatan Alves" time="22:52:19" />
+      <Card name="Chaiene Thomaz" time="12:62:22" />
     </Container>
   )
 }
