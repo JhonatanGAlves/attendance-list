@@ -6,9 +6,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
+    background: #151F30;
+  }
+
+  body, input, button {
+    font-family: 16px;
     font-family: 'Source Code Pro', monospace;
 
-    background: #151F30;
+    -webkit-font-smoothing: antialiased;
   }
 `
 
