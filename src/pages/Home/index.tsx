@@ -6,13 +6,10 @@ export const Home = () => {
   return (
     <Container>
       <h1>Lista de Presença</h1>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Digite o nome..."
-        />
-        <FontAwesomeIcon icon={faSearch} />
-      </div>
+      <input
+        type="text"
+        placeholder="Digite o nome..."
+      />
       <button>Adicionar</button>
     </Container>
   )

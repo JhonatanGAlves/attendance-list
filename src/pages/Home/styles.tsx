@@ -14,35 +14,20 @@ export const Container = styled.div`
     color: #FFFFFF
   }
 
-  .search {
-    display: flex;
-    align-items: center;
+  input {
     margin: 30px 0 20px;
-
     width: 400px;
     height: 40px;
-
+    padding: 10px 20px;
+    
+    border: none;
+    outline: none;
     border-radius: 5px;
+
+    font-size: 16px;
+
     background: #d9d9d9;
-
-    input {
-      flex: 1;
-      padding: 10px 20px;
-      border: none;
-      outline: none;
-  
-      font-size: 16px;
-  
-      background: transparent;
-      color: #181818;
-    }
-  
-    svg {
-      padding: 0 10px;
-
-      color: #181818;
-      background: transparent;
-    }
+    color: #181818;
   }
 
   button {
